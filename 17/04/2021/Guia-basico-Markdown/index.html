@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang=pt>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Visão geralA sintaxe básica delineada no documento de design original de John Gruber adicionou muitos dos elementos necessários no dia a dia, mas não foi suficiente para algumas pessoas. É aí que ent">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Guia Básico Markdown - Sintaxe Extendida">
+<meta property="og:url" content="https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/index.html">
+<meta property="og:site_name" content="Leonardo Marconi">
+<meta property="og:description" content="Visão geralA sintaxe básica delineada no documento de design original de John Gruber adicionou muitos dos elementos necessários no dia a dia, mas não foi suficiente para algumas pessoas. É aí que ent">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--4JbB7SY9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/g595slgphyi9lkqz2u18.png">
+<meta property="article:published_time" content="2021-04-17T17:48:55.000Z">
+<meta property="article:modified_time" content="2021-04-17T17:48:55.000Z">
+<meta property="article:author" content="Leonardo Marconi">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="sintaxe extendida">
+<meta property="article:tag" content="linguagem de marcação">
+<meta property="article:tag" content="processadores markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--4JbB7SY9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/g595slgphyi9lkqz2u18.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Guia Básico Markdown - Sintaxe Extendida</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Início</a></li>
+         
+          <li><a href="/gallery/">Galeria</a></li>
+         
+          <li><a href="/archives/">Artigos</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/LeonardoMarconi">Projetos</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Post Seguinte " href="/13/03/2021/O-que-e-elixir/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Acima " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Compartihar Post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Post Anterior</span>
+      <span id="i-next" class="info" style="display:none;">Post Seguinte</span>
+      <span id="i-top" class="info" style="display:none;">Acima</span>
+      <span id="i-share" class="info" style="display:none;">Compartihar Post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&text=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&is_video=false&description=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Guia Básico Markdown - Sintaxe Extendida&body=Check out this article: https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&name=Guia Básico Markdown - Sintaxe Extendida&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&t=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Visao-geral"><span class="toc-number">1.</span> <span class="toc-text">Visão geral</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disponibilidade"><span class="toc-number">2.</span> <span class="toc-text">Disponibilidade</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linguagens-de-marcacao-leves"><span class="toc-number">3.</span> <span class="toc-text">Linguagens de marcação leves</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tabelas"><span class="toc-number"></span> <span class="toc-text">Tabelas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alinhamento"><span class="toc-number"></span> <span class="toc-text">Alinhamento</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Caracteres-de-escape-%E2%80%9CPipe%E2%80%9D-nas-tabelas"><span class="toc-number"></span> <span class="toc-text">Caracteres de escape “Pipe” nas tabelas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blocos-de-codigo-cercados"><span class="toc-number"></span> <span class="toc-text">Blocos de código cercados</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Realce-de-sintaxe"><span class="toc-number"></span> <span class="toc-text">Realce de sintaxe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tachado"><span class="toc-number"></span> <span class="toc-text">Tachado</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Listas-de-Tarefas"><span class="toc-number"></span> <span class="toc-text">Listas de Tarefas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emoji"><span class="toc-number"></span> <span class="toc-text">Emoji</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Copiando-e-colando-o-emoji"><span class="toc-number">1.</span> <span class="toc-text">Copiando e colando o emoji</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Link-automatico-de-URL"><span class="toc-number"></span> <span class="toc-text">Link automático de URL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Desativando-a-vinculacao-automatica-de-URL"><span class="toc-number">1.</span> <span class="toc-text">Desativando a vinculação automática de URL</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Guia Básico Markdown - Sintaxe Extendida
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Leonardo Marconi</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-04-17T17:48:55.000Z" itemprop="datePublished">17-04-2021</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/linguagem-de-marcacao/" rel="tag">linguagem de marcação</a>, <a class="tag-link-link" href="/tags/markdown/" rel="tag">markdown</a>, <a class="tag-link-link" href="/tags/processadores-markdown/" rel="tag">processadores markdown</a>, <a class="tag-link-link" href="/tags/sintaxe-extendida/" rel="tag">sintaxe extendida</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4JbB7SY9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/g595slgphyi9lkqz2u18.png" alt="Markdown"></p>
+<h3 id="Visao-geral"><a href="#Visao-geral" class="headerlink" title="Visão geral"></a>Visão geral</h3><p>A sintaxe básica delineada no documento de design original de John Gruber adicionou muitos dos elementos necessários no dia a dia, mas não foi suficiente para algumas pessoas. É aí que entra a sintaxe estendida.</p>
+<p>Vários indivíduos e organizações se encarregaram de estender a sintaxe básica adicionando elementos adicionais como tabelas, blocos de código, realce de sintaxe, link automático de URL. Esses elementos podem ser ativados usando uma linguagem de marcação leve que se baseia na sintaxe Markdown básica ou adicionando uma extensão a um processador Markdown compatível.</p>
+<h3 id="Disponibilidade"><a href="#Disponibilidade" class="headerlink" title="Disponibilidade"></a>Disponibilidade</h3><p>Nem todos os aplicativos Markdown oferecem suporte a elementos de sintaxe estendidos. Você precisará verificar se a linguagem de marcação leve que seu aplicativo está usando suporta ou não os elementos de sintaxe estendidos que você deseja usar. Se não, ainda pode ser possível habilitar extensões em seu processador Markdown.</p>
+<h3 id="Linguagens-de-marcacao-leves"><a href="#Linguagens-de-marcacao-leves" class="headerlink" title="Linguagens de marcação leves"></a>Linguagens de marcação leves</h3><p>Existem várias linguagens de marcação leves que são superconjuntos do Markdown. Eles incluem a sintaxe básica do Gruber e a baseiam na adição de elementos adicionais como tabelas, blocos de código, realce de sintaxe, link automático de URL. Muitos dos aplicativos Markdown mais populares usam uma das seguintes linguagens de marcação leves:</p>
+<ul>
+<li>CommonMark</li>
+<li>GitHub Flavored Markdown (GFM)</li>
+<li>Markdown Extra</li>
+<li>MultiMarkdown</li>
+<li>R Markdown</li>
+<li>Processadores Markdown</li>
+</ul>
+<p>Existem dezenas de processadores Markdown disponíveis. Muitos deles permitem adicionar extensões que permitem elementos de sintaxe estendidos. Verifique a documentação do seu processador para obter mais informações.</p>
+<h2 id="Tabelas"><a href="#Tabelas" class="headerlink" title="Tabelas"></a>Tabelas</h2><p>Para adicionar uma tabela, use três ou mais hífens (<code>---</code>) para criar o cabeçalho de cada coluna e use barras verticais (|) para separar cada coluna.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></table></figure>
+<p>A saída renderizada é semelhante a esta:</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody></table>
+<p>As larguras das células podem variar, conforme mostrado abaixo. A saída renderizada terá a mesma aparência.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax | Description |</span><br><span class="line">| --- | ----------- |</span><br><span class="line">| Header | Title |</span><br><span class="line">| Paragraph | Text |</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Dica: Criar tabelas com hífens e barras verticais pode ser entediante. Para acelerar o processo, tente usar o Gerador de tabelas Markdown . Crie uma tabela usando a interface gráfica e, a seguir, copie o texto formatado em Markdown gerado em seu arquivo.</p>
+</blockquote>
+<h2 id="Alinhamento"><a href="#Alinhamento" class="headerlink" title="Alinhamento"></a>Alinhamento</h2><p>Você pode alinhar o texto nas colunas à esquerda, à direita ou ao centro adicionando dois-pontos (:) à esquerda, à direita ou em ambos os lados dos hifens na linha do cabeçalho.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description | Test Text     |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Header      | Title       | Here&#39;s this   |</span><br><span class="line">| Paragraph   | Text        | And more      |</span><br></pre></td></tr></table></figure>
+<p>A saída renderizada é semelhante a esta:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Syntax</th>
+<th align="center">Description</th>
+<th align="right">Test Text</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Header</td>
+<td align="center">Title</td>
+<td align="right">Here’s this</td>
+</tr>
+<tr>
+<td align="left">Paragraph</td>
+<td align="center">Text</td>
+<td align="right">And more</td>
+</tr>
+</tbody></table>
+<p>Você pode formatar o texto em tabelas. Por exemplo, você pode adicionar links , código (palavras ou frases em crases (`) apenas, não blocos de código ) e ênfase .</p>
+<p>Você não pode adicionar títulos, blockquotes, listas, regras horizontais, imagens ou tags HTML.</p>
+<h2 id="Caracteres-de-escape-“Pipe”-nas-tabelas"><a href="#Caracteres-de-escape-“Pipe”-nas-tabelas" class="headerlink" title="Caracteres de escape “Pipe” nas tabelas"></a>Caracteres de escape “Pipe” nas tabelas</h2><p>Você pode exibir um caractere de barra vertical (|) em uma tabela usando seu código de caractere HTML (<code>&amp;#124;</code>).</p>
+<h2 id="Blocos-de-codigo-cercados"><a href="#Blocos-de-codigo-cercados" class="headerlink" title="Blocos de código cercados"></a>Blocos de código cercados</h2><p>A sintaxe básica do Markdown permite criar blocos de código recuando as linhas em quatro espaços ou uma tabulação. Se você achar isso inconveniente, tente usar blocos de código cercados. Dependendo do seu processador ou editor Markdown, você usará três crases (```) ou três tis (~~~) nas linhas antes e depois do bloco de código. A melhor parte? Você não precisa recuar nenhuma linha!</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~~~</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">~~~</span><br></pre></td></tr></table></figure>
+
+<p>A saída renderizada é semelhante a esta:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Realce-de-sintaxe"><a href="#Realce-de-sintaxe" class="headerlink" title="Realce de sintaxe"></a>Realce de sintaxe</h2><p>Muitos processadores Markdown suportam realce de sintaxe para blocos de código protegidos. Este recurso permite adicionar realce de cor para qualquer linguagem em que seu código foi escrito. Para adicionar realce de sintaxe, especifique uma lnguagem próximo as crases antes do bloco de código protegido.</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~~~json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">~~~</span><br></pre></td></tr></table></figure>
+
+
+<p>A saída renderizada é semelhante a esta:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;firstName&quot;</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;lastName&quot;</span>: <span class="string">&quot;Smith&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;age&quot;</span>: <span class="number">25</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tachado"><a href="#Tachado" class="headerlink" title="Tachado"></a>Tachado</h2><p>Você pode tachar palavras colocando uma linha horizontal no centro delas. O resultado parece <del>como isso</del>. Este recurso permite que você indique que certas palavras são um erro que não deve ser incluído no documento. Para rasurar palavras, use dois símbolos de til (~~) antes e depois das palavras.</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~O Mundo é Plano~~. Agora sabemos que o mundo é redondo.</span><br></pre></td></tr></table></figure>
+<p>A saída renderizada é semelhante a esta:</p>
+<p><del>O mundo é Plano</del>. Agora sabemos que o mundo é redondo.</p>
+<h2 id="Listas-de-Tarefas"><a href="#Listas-de-Tarefas" class="headerlink" title="Listas de Tarefas"></a>Listas de Tarefas</h2><p>As listas de tarefas permitem que você crie uma lista de itens com caixas de seleção. Em aplicativos Markdown que suportam listas de tarefas, as caixas de seleção serão exibidas ao lado do conteúdo. Para criar uma lista de tarefas, adicione travessões (-) e colchetes com um espaço ([ ]) na frente dos itens da lista de tarefas. Para selecionar uma caixa de seleção, adicione um <code>x</code> entre colchetes ( [x]).</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- [x] Write the press release</span><br><span class="line">- [ ] Update the website</span><br><span class="line">- [ ] Contact the media</span><br></pre></td></tr></table></figure>
+<p>A saída renderizada é semelhante a esta:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Write the press release</li>
+<li><input disabled="" type="checkbox"> Update the website</li>
+<li><input disabled="" type="checkbox"> Contact the media</li>
+</ul>
+<h2 id="Emoji"><a href="#Emoji" class="headerlink" title="Emoji"></a>Emoji</h2><p>Existem duas maneiras de adicionar emoji a arquivos Markdown: copie e cole o emoji em seu texto formatado em Markdown ou digite códigos de atalho de emoji .</p>
+<h3 id="Copiando-e-colando-o-emoji"><a href="#Copiando-e-colando-o-emoji" class="headerlink" title="Copiando e colando o emoji"></a>Copiando e colando o emoji</h3><p>Na maioria dos casos, você pode simplesmente copiar um emoji de uma fonte como a Emojipedia e colá-lo em seu documento. Muitos aplicativos Markdown exibirão automaticamente o emoji no texto formatado em Markdown. Os arquivos HTML e PDF exportados de seu aplicativo Markdown devem exibir o emoji.</p>
+<blockquote>
+<p>Dica: se você estiver usando um gerador de site estático, certifique-se de codificar as páginas HTML como UTF-8 .</p>
+</blockquote>
+<h2 id="Link-automatico-de-URL"><a href="#Link-automatico-de-URL" class="headerlink" title="Link automático de URL"></a>Link automático de URL</h2><p>Muitos processadores Markdown transformam URLs em links automaticamente. Isso significa que se você digitar <a target="_blank" rel="noopener" href="http://www.example.com/">http://www.example.com</a>, seu processador Markdown o transformará automaticamente em um link, mesmo que você não tenha usado colchetes .</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.example.com</span><br></pre></td></tr></table></figure>
+<p>A saída renderizada é semelhante a esta:</p>
+<p><a target="_blank" rel="noopener" href="http://www.example.com/">http://www.example.com</a></p>
+<h3 id="Desativando-a-vinculacao-automatica-de-URL"><a href="#Desativando-a-vinculacao-automatica-de-URL" class="headerlink" title="Desativando a vinculação automática de URL"></a>Desativando a vinculação automática de URL</h3><p>Se você não quiser que um URL seja vinculado automaticamente, você pode remover o link denotando o URL como um código com crases.</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`http://www.example.com`</span><br></pre></td></tr></table></figure>
+<p>A saída renderizada é semelhante a esta:</p>
+<p><code>http://www.example.com</code></p>
+<p>Fonte (em inglês):<a target="_blank" rel="noopener" href="https://www.markdownguide.org/extended-syntax/">https://www.markdownguide.org/extended-syntax/</a><br>Acessado em 17/04/2021</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Início</a></li>
+         
+          <li><a href="/gallery/">Galeria</a></li>
+         
+          <li><a href="/archives/">Artigos</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/LeonardoMarconi">Projetos</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Visao-geral"><span class="toc-number">1.</span> <span class="toc-text">Visão geral</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disponibilidade"><span class="toc-number">2.</span> <span class="toc-text">Disponibilidade</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linguagens-de-marcacao-leves"><span class="toc-number">3.</span> <span class="toc-text">Linguagens de marcação leves</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tabelas"><span class="toc-number"></span> <span class="toc-text">Tabelas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alinhamento"><span class="toc-number"></span> <span class="toc-text">Alinhamento</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Caracteres-de-escape-%E2%80%9CPipe%E2%80%9D-nas-tabelas"><span class="toc-number"></span> <span class="toc-text">Caracteres de escape “Pipe” nas tabelas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blocos-de-codigo-cercados"><span class="toc-number"></span> <span class="toc-text">Blocos de código cercados</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Realce-de-sintaxe"><span class="toc-number"></span> <span class="toc-text">Realce de sintaxe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tachado"><span class="toc-number"></span> <span class="toc-text">Tachado</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Listas-de-Tarefas"><span class="toc-number"></span> <span class="toc-text">Listas de Tarefas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emoji"><span class="toc-number"></span> <span class="toc-text">Emoji</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Copiando-e-colando-o-emoji"><span class="toc-number">1.</span> <span class="toc-text">Copiando e colando o emoji</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Link-automatico-de-URL"><span class="toc-number"></span> <span class="toc-text">Link automático de URL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Desativando-a-vinculacao-automatica-de-URL"><span class="toc-number">1.</span> <span class="toc-text">Desativando a vinculação automática de URL</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&text=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&is_video=false&description=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Guia Básico Markdown - Sintaxe Extendida&body=Check out this article: https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&title=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&name=Guia Básico Markdown - Sintaxe Extendida&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://leonardomarconi.github.io/17/04/2021/Guia-basico-Markdown/&t=Guia Básico Markdown - Sintaxe Extendida"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Compartilhar</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020-2021
+    Leonardo Marconi
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Início</a></li>
+         
+          <li><a href="/gallery/">Galeria</a></li>
+         
+          <li><a href="/archives/">Artigos</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/LeonardoMarconi">Projetos</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
